@@ -1,0 +1,17 @@
+$screen-md-min: 724px;
+$screen-xl-min: 1200px;
+
+$colors: (
+	'purple': #5a68dd,
+	'blue': #2B5EB1,
+	'light-blue': #1A4A99,
+	'light-purple': #6872e0,
+	'grey': #aaafb9,
+	'light-grey': #f5f7f8, 
+	'white': #ffffff
+) !default;
+
+$breakpoints: (
+  'tablet': (min-width: #{$screen-md-min}),
+  'desktop': (min-width: #{$screen-xl-min})
+) !default;

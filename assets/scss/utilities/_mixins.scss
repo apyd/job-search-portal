@@ -1,0 +1,29 @@
+@use 'variables';
+
+@mixin positionFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin animation($name, $duration) {
+    @keyframes #{$name} {
+      @content;
+    }
+    animation-name: $name;
+	animation-duration: $duration;
+}
+
+/// Mixin to manage responsive breakpoints - author Hugo Giraudel
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key(variables.$breakpoints, $breakpoint) {
+        @media #{inspect(map-get(variables.$breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+    }
+}
