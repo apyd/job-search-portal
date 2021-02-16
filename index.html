@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Job search portal</title>
+</head>
+
+<body>
+    <header class="header">
+			<h1 class="logo">myJobs</h1>
+			<div class="theme-switch">
+				<img class="theme-switch__icon" src="assets/img/sun.svg" alt="sun icon">
+				<input class="theme-switch__input" type="checkbox" id=switch>
+				<label class="theme-switch__label" for="switch"></label>
+				<img class="theme-switch__icon" src="assets/img/moon.svg" alt="moon icon">
+			</div>
+			</header>
+			<main class="main">
+				<div class="form">
+					<div class="input__wrapper">
+						<img class="input__icon" src="assets/img/search.svg">
+						<input class="input input--search" type="search" id="search-title"
+							placeholder="Filter by title, companies, expertise...">
+						<label for="search-title" class="search-input__label"></label>
+						<button class="btn btn--primary btn--icon btn--pull-right-middle"><img class="btn__icon"
+								src="assets/img/search.svg" alt="search icon"></button>
+			</div>
+			<div class="input__wrapper">
+				<img class="input__icon" src="assets/img/location.svg">
+				<input class="input input--search" type="search" id="search-location" placeholder="Filter by location...">
+				<label for="search-location" class="search-location__label"></label>
+			</div>
+			<div class="input__wrapper">
+				<input class="checkbox" type="checkbox" id="work-type">
+				<label for="work-type" class="checkbox__label">Full time</label>
+				<button class="btn">Search</button>
+			</div>
+		</div>
+		<div class="cards">
+        	<div class="card">
+				<div class="icon__wrapper">
+					<img class="icon" src="/assets/img/sun.svg">
+				</div>
+				<div class="card__row">
+					<p class="card__text">5h ago</p>
+					<p class="card__text">&middot;</p>
+					<p class="card__text">Full Time</p>
+				</div>
+				<h2 class="card__heading">Senior Software Engineer</h2>
+				<p class="card__text">So Digital Inc.</p>
+				<p class="card__footer">Remote, Seoul, Toyko, Mountain View, San Francisco</p>
+			</div>
+			<div class="card">
+				<div class="icon__wrapper">
+					<img class="icon" src="/assets/img/sun.svg">
+				</div>
+				<div class="card__row">
+					<p class="card__text">5h ago</p>
+					<p class="card__text">&middot;</p>
+					<p class="card__text">Full Time</p>
+				</div>
+				<h2 class="card__heading">Senior Software Engineer</h2>
+				<p class="card__text">So Digital Inc.</p>
+				<p class="card__footer">Remote, Seoul, Toyko, Mountain View, San Francisco</p>
+			</div>
+			<div class="card">
+				<div class="icon__wrapper">
+					<img class="icon" src="/assets/img/sun.svg">
+				</div>
+				<div class="card__row">
+					<p class="card__text">5h ago</p>
+					<p class="card__text">&middot;</p>
+					<p class="card__text">Full Time</p>
+				</div>
+				<h2 class="card__heading">Senior Software Engineer</h2>
+				<p class="card__text">So Digital Inc.</p>
+				<p class="card__footer">Remote, Seoul, Toyko, Mountain View, San Francisco</>
+					</div>
+		</div>
+    </main>
+	<button class="btn btn--primary">Load More</button>
+</body>
+
+</html>
