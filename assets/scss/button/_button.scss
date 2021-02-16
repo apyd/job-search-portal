@@ -1,0 +1,29 @@
+@use '../utilities/functions';
+
+.btn {
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	line-height: .8em;
+	padding: 1.2em 1.5em;
+	margin: .5em;
+	background-color: transparent;
+
+	&--primary {
+		background-color: functions.color('blue');
+		color: functions.color('white');
+		font-weight: 600;
+	}
+
+	&--icon {
+		padding: .8em .8em;
+		margin: 0;
+	}
+
+	&--pull-right-middle {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translateY(-50%);
+	}
+}

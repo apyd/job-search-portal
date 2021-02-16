@@ -1,0 +1,291 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #f5f7f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+  background: url("../img/bg.svg");
+  padding: 40px 20px 90px 20px;
+}
+
+.logo {
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  line-height: 1.1em;
+  font-size: 2rem;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  top: -40px;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  line-height: 0.8em;
+  padding: 1.2em 1.5em;
+  margin: 0.5em;
+  background-color: transparent;
+}
+.btn--primary {
+  background-color: #2B5EB1;
+  color: #ffffff;
+  font-weight: 600;
+}
+.btn--icon {
+  padding: 0.8em 0.8em;
+  margin: 0;
+}
+.btn--pull-right-middle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  padding: 30px 70px 30px 30px;
+  font-size: 1.1rem;
+  width: 100%;
+}
+.input__wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+.input__icon {
+  display: none;
+}
+
+.input__wrapper:nth-child(n+2) {
+  display: none;
+}
+
+.theme-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.theme-switch__input {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.theme-switch__input:checked + .theme-switch__label::after {
+  left: 65%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.theme-switch__label {
+  display: inline-block;
+  position: relative;
+  width: 55px;
+  height: 30px;
+  margin: 0 10px;
+}
+.theme-switch__label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.theme-switch__label::after {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  -webkit-transform: translate(-15%, -50%);
+  transform: translate(-15%, -50%);
+  width: 1em;
+  height: 1em;
+  content: "";
+  border-radius: 15px;
+  background-color: #2B5EB1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 2em 0 1.5em 0;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: #ffffff;
+}
+.card:hover {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+}
+.card:hover > .card__heading {
+  color: #2B5EB1;
+}
+.card__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: -40px;
+}
+.card__heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card__text {
+  margin: 10px 10px 10px 0;
+  font-size: 1rem;
+  color: #aaafb9;
+}
+.card__footer {
+  padding-top: 10px;
+  color: #2B5EB1;
+  font-weight: 700;
+}
+
+.icon__wrapper {
+  padding: 1em;
+  border-radius: 16px;
+  line-height: 1em;
+  background-color: red;
+  position: relative;
+  top: -55px;
+}

@@ -1,0 +1,57 @@
+@use '../utilities/functions';
+@use '../utilities/mixins';
+
+.theme-switch {
+	$this: &;
+	
+	@include mixins.positionFlex(row, center, center);
+	position: relative;
+
+	&__input {
+		position: absolute;
+		height: 1px;
+		width: 1px;
+		clip: rect(1px, 1px, 1px, 1px);
+		margin: -1px;
+		padding: 0;
+		border: 0;
+		overflow: hidden;
+
+		&:checked + #{$this}__label::after {
+			left: 65%;
+			transition: all .3s;
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		position: relative;
+		width: 55px;
+		height: 30px;
+		margin: 0 10px;	
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			content: '';
+			border-radius: 15px;
+			background-color: functions.color('white');
+		}
+
+		&::after {
+			position: absolute;
+			top: 50%;
+			left: 15%;
+			transform: translate(-15%, -50%);
+			width: 1em;
+			height: 1em;
+			content: '';
+			border-radius: 15px;
+			background-color: functions.color('blue');
+			transition: all .3s;
+		}
+	}
+}

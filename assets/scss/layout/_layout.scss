@@ -1,0 +1,51 @@
+@use '../utilities/functions';
+@use '../utilities/mixins';
+
+*, *::after, *::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background-color: functions.color('light-grey');
+	@include mixins.positionFlex(column, stretch, center);
+	padding-bottom: 20px;
+}
+
+.header {
+	@include mixins.positionFlex(row, space-between, stretch);
+	width: 100%;
+	background: url('../img/bg.svg');
+	padding: 40px 20px 90px 20px;
+}
+
+.logo {
+	color: functions.color('white');
+	letter-spacing: 0.05em;
+	line-height: 1.1em;
+	font-size: 2rem;
+}
+
+.main {
+	@include mixins.positionFlex(column, center, center);
+	padding: 0 20px;
+	width: 100%;
+}
+
+.cards {
+	@include mixins.positionFlex(column, flex-start, stretch);
+	width: 100%;
+}
+
+.form {
+	@include mixins.positionFlex(row, stretch, center);
+	position: relative;
+	top: -40px;
+	width: 100%;
+}

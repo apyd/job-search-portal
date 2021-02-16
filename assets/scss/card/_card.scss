@@ -1,0 +1,54 @@
+@use '../utilities/functions';
+@use '../utilities/mixins';
+
+.card {
+	$this: &;
+
+	@include positionFlex(column, flex-start, flex-start);
+	flex: 1;
+	margin: 2em 0 1.5em 0;
+	padding: 30px;
+	border-radius: 5px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	background-color: functions.color('white');
+
+	&:hover {
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+		cursor: pointer;
+
+		> #{$this}__heading {
+			color: functions.color('blue');
+		}
+	}
+
+	&__row {
+		@include mixins.positionFlex(row, flex-start, center);
+		margin-top: -40px;
+	}
+
+	&__heading {
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	&__text {
+		margin: 10px 10px 10px 0;
+		font-size: 1rem;
+		color: functions.color('grey');
+	}
+
+	&__footer {
+		padding-top: 10px;
+		color: functions.color('blue');
+		font-weight: 700;
+	}
+}
+
+.icon__wrapper {
+	padding: 1em;
+	border-radius: 16px;
+	line-height: 1em;
+	background-color: red;
+	position: relative;
+	top: -55px;
+}
