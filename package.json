@@ -1,0 +1,35 @@
+{
+  "name": "job-search-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apyd/job-search-portal.git"
+  },
+  "author": "Artur Pydych",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apyd/job-search-portal/issues"
+  },
+  "homepage": "https://github.com/apyd/job-search-portal#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "browser-sync": "^2.26.14",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-dart-sass": "^1.0.2",
+    "prettier": "^2.2.1"
+  }
+}
