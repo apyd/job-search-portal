@@ -1,21 +1,46 @@
+@use '../utilities/functions';
+@use '../utilities/mixins';
+
 .input {
+	font-family: 'Open Sans', sans-serif;
+	color: functions.color('grey');
 	border: none;
 	border-radius: 5px;
 	padding: 30px 70px 30px 30px;
 	font-size: 1.1rem;
 	width: 100%;
 
+	@include mixins.respond-to('tablet') {
+		border: none;
+		border-radius: 5px 0px 0px 5px;
+		border-right: 3px solid functions.color('light-grey');
+		padding: 30px 15px 30px 50px;
+	}
+
+
 	&__wrapper {
 		flex: 1;
 		position: relative;
+		@include mixins.positionFlex(row, center, center);
+
+		&:nth-child(n+2) {
+			display: none;
+	
+			@include mixins.respond-to('tablet') {
+				@include mixins.positionFlex(row, flex-start, center);
+				flex: 1;
+			}
+		}
 	}
 
 	&__icon {
 		display: none;
+
+		@include mixins.respond-to('tablet') {
+			display: inline-block;
+			position: absolute;
+			left: 20px;
+			filter: invert(33%) sepia(36%) saturate(2141%) hue-rotate(192deg) brightness(87%) contrast(89%);
+		}
 	}
-
-}
-
-.input__wrapper:nth-child(n+2) {
-	display: none;
 }

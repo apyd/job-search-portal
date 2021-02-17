@@ -1,4 +1,5 @@
 @use '../utilities/functions';
+@use '../utilities/mixins';
 
 .btn {
 	border: none;
@@ -6,8 +7,11 @@
 	font-size: 1.2rem;
 	line-height: .8em;
 	padding: 1.2em 1.5em;
-	margin: .5em;
 	background-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
 
 	&--primary {
 		background-color: functions.color('blue');
@@ -17,7 +21,10 @@
 
 	&--icon {
 		padding: .8em .8em;
-		margin: 0;
+
+		@include mixins.respond-to('tablet') {
+			display: none;
+		}
 	}
 
 	&--pull-right-middle {

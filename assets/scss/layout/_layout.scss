@@ -35,6 +35,7 @@ body {
 .main {
 	@include mixins.positionFlex(column, center, center);
 	padding: 0 20px;
+	margin-bottom: 20px;
 	width: 100%;
 }
 
@@ -44,8 +45,14 @@ body {
 }
 
 .form {
-	@include mixins.positionFlex(row, stretch, center);
+	@include mixins.positionFlex(row, center, center);
 	position: relative;
 	top: -40px;
 	width: 100%;
+
+	@include mixins.respond-to('tablet') {
+		@include mixins.positionFlex(row, center, stretch);
+		background-color: functions.color('white');
+		border-radius: 5px;
+	}
 }

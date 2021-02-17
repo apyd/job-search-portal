@@ -30,6 +30,10 @@
 		height: 30px;
 		margin: 0 10px;	
 
+		&:hover {
+			cursor: pointer;
+		}
+
 		&::before {
 			position: absolute;
 			top: 0;
